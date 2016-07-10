@@ -22,19 +22,6 @@ html {
     height: 100%;
   }
 }
-
-@media (min-width: $screen-sm-min) {
-  .iframe-wrapper {
-    iframe {
-      border: none;
-      position: absolute;
-    }
-  }
-  .form-footer, .terms-conditions{
-    font-size: rem(40);
-  }
-}
-
 @media screen and (max-width: 325px) {
   html, html body{
     font-size: 22px !important;
@@ -46,3 +33,14 @@ html {
   }
 
 }
+@media (min-width: $screen-sm-min) {
+  .form-footer, .terms-conditions{
+    font-size: rem(40);
+  }
+}
+@media screen and(min-width: $screen-sm-max) {
+  html, html body{
+    font-size: 16px;
+  }
+}
+

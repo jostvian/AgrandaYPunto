@@ -105,7 +105,7 @@
                 };
             }],
             template:
-            '<div class="form-inline col-md-8 reset-padding">' +
+            '<div class="form-inline col-md-9 reset-padding">' +
             '  <div class="form-group col-xs-3 reset-padding right-container">' +
             '     <select name="dateFields.day" data-ng-model="dateFields.day" placeholder="Day" class="form-control" ng-options="day for day in days" ng-change="checkDate()" ng-disabled="disableFields"><option value="">DÍA</option></select>' +
             '  </div>' +
