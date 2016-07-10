@@ -7,11 +7,11 @@ block content
         div.user-content.container(ng-controller='UserRegister as uc')
             form.user-content-form
                 fieldset.user-content-first
-                    div.form-group
-                        label.col-md-3(for='name')='NOMBRE * COMPLETO'
-                        div.col-md-9
+                    div.form-group.col-xs-12
+                        label.col-md-3.col-xs-4(for='name')='NOMBRE COMPLETO*'
+                        div.col-md-9.col-xs-8
                             input.form-control#name(name='name', type='text')
-                    div.form-group
+                    div.form-group.col-xs-12
                         div.col-xs-12.col-md-5
                             select#doc-type.form-control
                                 option='TIPO DE DOCUMENTO'
@@ -19,17 +19,39 @@ block content
                         label.col-xs-12.col-md-4(for='doc-number')='No. DOCUMENTO'
                         div.col-xs-12.col-md-3
                             input#doc-number.form-control(name='doc-number', type='number')
-                    div.form-group
-                        label.col-md-4='¿CUANDO NACISTE?'
-                        div
-                            input(rsmdatedropdowns, ng-model="model")
-
+                    div.form-group.col-xs-12
+                        label.col-md-4.col-xs-12='¿CUANDO NACISTE?'
+                    div.form-group.col-xs-6.col-md-6
+                        label.col-xs-12.col-md-4(for='cellphone')='CELULAR*'
+                        div.col-xs-12.col-md-8
+                            input.form-control#cellphone(type='number', name='cellphone')
+                    div.form-group.col-xs-6.col-md-6
+                        label.col-xs-12.col-md-4(for='phone')='TELÉFONO*'
+                        div.col-xs-12.col-md-8
+                            input.form-control#phone(type='number', name='phone')
+                    div.form-group.col-xs-12
+                        label.col-xs-4.col-md-3(for='address')='DIRECCIÓN'
+                        div.col-xs-8.col-md-9
+                            input.form-control#address(type='text', name='address')
+                    div.form-group.col-md-6.col-xs-12
+                        label.col-xs-4.col-md-4(for='city')='CIUDAD DE RESIDENCIA'
+                        div.col-xs-8.col-md-8
+                            input.form-control#city(type='text', name='city')
+                    div.form-group.col-md-6.col-xs-12
+                        label.col-xs-4.col-md-4(for='email')='EMAIL*'
+                        div.col-xs-8.col-md-8
+                            input.form-control#email(type='email', name='email')
 
                 fieldset.user-content-second
-                    div.form-group
-                        label.col-md-3(for='invoice-number')='NÚMERO DE FACTURA'
-                        div.col-md-3
+                    div.form-group.col-xs-12
+                        label.col-md-3.col-xs-5(for='invoice-number')='NÚMERO DE FACTURA*'
+                        div.col-md-3.col-xs-7
                             input.form-control#invoice-number(name='invoice-number')
+                    div.form-group.col-xs-12
+                        label.col-md-3.col-xs-5(for='bono-number')='NÚMERO DE BONO*'
+                        div.col-md-3.col-xs-7
+                            input.form-control#bono-number(name='bono-number')
+
 
 block scripts
     script(type='text/javascript',  src='/scripts/app.js')
