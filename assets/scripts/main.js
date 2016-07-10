@@ -106,13 +106,13 @@
             }],
             template:
             '<div class="form-inline">' +
-            '  <div class="form-group col-xs-3">' +
+            '  <div class="form-group col-xs-3 reset-padding">' +
             '     <select name="dateFields.day" data-ng-model="dateFields.day" placeholder="Day" class="form-control" ng-options="day for day in days" ng-change="checkDate()" ng-disabled="disableFields"><option value="">DÍA</option></select>' +
             '  </div>' +
-            '  <div class="form-group col-xs-5">' +
+            '  <div class="form-group col-xs-5 reset-padding">' +
             '    <select name="dateFields.month" data-ng-model="dateFields.month" placeholder="Month" class="form-control" ng-options="month.value as month.name for month in months" value="{{ dateField.month }}" ng-change="checkDate()" ng-disabled="disableFields"><option value="">MES</option> </select>' +
             '  </div>' +
-            '  <div class="form-group col-xs-4">' +
+            '  <div class="form-group col-xs-4 reset-padding">' +
             '    <select ng-show="!yearText" name="dateFields.year" data-ng-model="dateFields.year" placeholder="Year" class="form-control" ng-options="year for year in years" ng-change="checkDate()" ng-disabled="disableFields"><option value="">AÑO</option></select>' +
             '    <input ng-show="yearText" type="text" name="dateFields.year" data-ng-model="dateFields.year" placeholder="Year" class="form-control" ng-disabled="disableFields">' +
             '  </div>' +
