@@ -4,7 +4,7 @@ block header
 
 block content
     div.container.content(ng-app='agranda-y-punto')
-        div.user-content.container(ng-controller='')
+        div.user-content.container(ng-controller='UserRegister as uc')
             form.user-content-form
                 fieldset.user-content-first
                     div.form-group
@@ -21,13 +21,15 @@ block content
                             input#doc-number.form-control(name='doc-number', type='number')
                     div.form-group
                         label.col-md-4='¿CUANDO NACISTE?'
+                        div
+                            input(rsmdatedropdowns, ng-model="model")
+
 
                 fieldset.user-content-second
                     div.form-group
                         label.col-md-3(for='invoice-number')='NÚMERO DE FACTURA'
                         div.col-md-3
                             input.form-control#invoice-number(name='invoice-number')
-
 
 block scripts
     script(type='text/javascript',  src='/scripts/app.js')

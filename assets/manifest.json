@@ -7,7 +7,8 @@
     },
     "app.js": {
       "files": [
-        "scripts/app/app.js"
+        "scripts/app/app.js",
+        "scripts/app/controllers.js"
       ]
     },
     "admin.js": {

@@ -3,16 +3,18 @@
  */
 var app = angular.module('agranda-y-punto',['ngResource',
     'ngAnimate',
-    'ui.bootstrap']);
+    'ui.bootstrap',
+    'rorymadden.date-dropdowns'
+]);
 
-app.config(['$routeProvider','$locationProvider'],
-function($routeProvider, $locationProvider){
+app.config(['$locationProvider',
+function( $locationProvider){
     $locationProvider.html5Mode(true);
-    $routeProvider
-        .when("/", {
-            templateUrl: 'templates/userForm.jade'
-        })
-        .otherwiere({
-            redirectTo: "/"
-        });
-});
+    // $routeProvider
+    //     .when("/", {
+    //         templateUrl: 'templates/userForm.jade'
+    //     })
+    //     .otherwiere({
+    //         redirectTo: "/"
+    //     });
+}]);
