@@ -35,11 +35,10 @@ app.controller("UserRegister", ['$scope', 'UserService', '$uibModal', function (
                     controller: 'ModalController',
                     resolve: {
                         message: function () {
-                            return 'Debe contar con mínimo 40000 puntos';
+                            return '¡LO SENTIMOS! Debes cargar como mínimo 40.000 puntos para participar.';
                         }
                     }
                 });
-                    // alert('Debe contar con mínimo 40000 puntos');
             }else{
 
             }
@@ -48,4 +47,7 @@ app.controller("UserRegister", ['$scope', 'UserService', '$uibModal', function (
 }]);
 app.controller("ModalController", ['$scope',  '$uibModalInstance', 'message', function ($scope, uibModalInstance, message) {
     $scope.message = message;
+    $scope.ok = function(){
+        uibModalInstance.close();
+    }
 }]);

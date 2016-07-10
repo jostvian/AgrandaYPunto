@@ -1,0 +1,30 @@
+.modal {
+  &-content {
+    background: url(/images/fondo.png) no-repeat transparent;
+    background-size: cover;
+    border: none;
+    box-shadow: none;
+    padding: 10px 30px;
+  }
+  &-header {
+    border: none;
+    .btn-close{
+      background: url(/images/boton_x.png) no-repeat transparent;
+      background-size: cover;
+      border: none;
+      height: 50px;
+      width: 50px;
+      margin-right: -46px;
+      margin-top: -27px;
+    }
+  }
+  &-body {
+    border: none;
+    color: darkviolet;
+    font-weight: 700;
+    text-align: center;
+  }
+  &-footer {
+    border: none;
+  }
+}
