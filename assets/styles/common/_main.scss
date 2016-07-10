@@ -42,6 +42,13 @@
     background: linear-gradient(130deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
     padding-bottom: rem(20);
     padding-top: rem(15);
+    .plus-button{
+      background-image: url("../images/plus-button.png");
+      background-color: transparent;
+      width: 52px;
+      height: 52px;
+      border: none;
+    }
   }
 }
 .reset-padding{
