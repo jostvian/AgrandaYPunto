@@ -3,7 +3,7 @@
  */
 var app = angular.module('agranda-y-punto');
 
-var controller = app.controller("user-register", ['$scope',function($cope){
+app.controller("UserRegister", ['$scope',function($scope){
     $userRegister = this;
     var months = [
         {
