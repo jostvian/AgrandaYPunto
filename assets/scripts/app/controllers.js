@@ -5,4 +5,16 @@ var app = angular.module('agranda-y-punto');
 
 app.controller("UserRegister", ['$scope',function($scope){
     uc = this;
+    uc.rows = [
+        {
+            code: '',
+            invoice: ''
+        }
+    ];
+    uc.addRow=function(){
+        uc.rows.push({
+            code: '',
+            invoice: ''
+        })
+    };
 }]);

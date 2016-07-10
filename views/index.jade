@@ -45,20 +45,21 @@ block content
 
 
                 fieldset.user-content-second
-                    div.form-group.col-xs-12
-                        label.col-md-3.col-xs-5(for='invoice-number')='NÚMERO DE FACTURA*'
-                        div.col-md-3.col-xs-7
-                            input.form-control#invoice-number(name='invoice-number')
-                    div.form-group.col-xs-12
-                        label.col-md-3.col-xs-5(for='bono-number')='NÚMERO DE BONO*'
-                        div.col-md-3.col-xs-7
-                            input.form-control#bono-number(name='bono-number')
+                    div(ng-repeat="row in uc.rows")
+                        div.form-group.col-xs-12.col-md-6
+                            label.col-md-6.col-xs-5(for='invoice-number')='NÚMERO DE FACTURA*'
+                            div.col-md-6.col-xs-7
+                                input.form-control#invoice-number(name='invoice-number')
+                        div.form-group.col-xs-12.col-md-6
+                            label.col-md-6.col-xs-5(for='bono-number')='NÚMERO DE BONO*'
+                            div.col-md-6.col-xs-7
+                                input.form-control#bono-number(name='bono-number')
                     div.form-group.col-xs-12
                         label.terms-conditions='Acepto Términos y Condiciones '
                         input(type='checkbox', value='', required)
                     div.form-group.col-xs-12
                         button.col-xs-9(type='submit')='ENVIA PUNTOS'
-                        button.col-xs-3.plus-button(type='button')=' + '
+                        button.col-xs-3.plus-button.pull-right(type='button', ng-click="uc.addRow()")=' + '
 
 
 block scripts
