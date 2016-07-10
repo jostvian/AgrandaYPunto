@@ -1,0 +1,10 @@
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function rem($pixels) {
+  $base: strip-units($font-size-base);
+  $size: $pixels/$base;
+  @return #{$size}rem;
+}
+

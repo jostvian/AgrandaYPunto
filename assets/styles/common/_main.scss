@@ -1,0 +1,48 @@
+.main-container {
+  display: table;
+  padding-top: 10px;
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+.hero-header {
+  background: url(../images/hero-header-xs.jpg) no-repeat;
+  background-size: cover !important;
+  height: 70.60vh;
+}
+
+.user-content {
+  max-width: rem(553);
+  text-transform: uppercase;
+  label {
+    color: white;
+  }
+  &-first {
+    background: url(../images/segment-fondo-form.png) repeat-x;
+    padding-bottom: rem(12);
+    padding-top: rem(40);
+    .form-contrl{
+      color: purple;
+      font-weight: 700;
+    }
+  }
+  &-second {
+    background: -webkit-linear-gradient(320deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
+    background: -o-linear-gradient(320deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
+    background: -ms-linear-gradient(320deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
+    background: -moz-linear-gradient(320deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
+    background: linear-gradient(130deg, rgba(111, 197, 211, .5), rgba(111, 197, 211, .5) 1%, rgba(1, 167, 184, .5) 61%, rgba(1, 152, 143, .5) 100%);
+    padding-bottom: rem(20);
+    padding-top: rem(15);
+  }
+}
+
+@media screen and(min-width: $screen-sm-max) {
+  .hero-header {
+    background: url(../images/hero-header.jpg) no-repeat;
+    height: 82vh;
+  }
+}

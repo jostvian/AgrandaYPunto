@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ]
+    },
+    "app.js": {
+      "files": [
+        "scripts/app/app.js"
+      ]
+    },
+    "admin.js": {
+      "files": [
+        "scripts/admin/admin.js"
+      ]
+    },
+    "fonts": {
+      "files": ["fonts/**/*"]
+    },
+    "images": {
+      "files": ["images/**/*"]
+    },
+    "vendor.js": {
+      "bower": ["jquery", "angular", "angular-animate", "angular-touch", "bootstrap-sass", "angular-resource", "angular-bootstrap"]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    }
+  },
+  "paths": {
+    "source": "assets/",
+    "dist": "public/"
+  }
+}

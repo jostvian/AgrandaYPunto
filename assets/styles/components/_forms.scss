@@ -1,0 +1,13 @@
+.form-signin {
+  margin: auto;
+  max-width: rem(330);
+  input{
+    width: 100%;
+  }
+  .form-group::after, .form-group::before {
+   content:"";
+    clear: both;
+    display: table;
+  }
+
+}

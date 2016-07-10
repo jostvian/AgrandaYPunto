@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/styles/main.css')
+    script(src='https://use.fontawesome.com/60e506b2ee.js')
+
+  body
+    block header
+    div.main-container.container-fluid()
+      block content
+    div.footer
+      block footer
+    script(type='text/javascript',  src='/scripts/vendor.js')
+    script(type='text/javascript',  src='/scripts/main.js')
+    block scripts

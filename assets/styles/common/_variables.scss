@@ -1,0 +1,31 @@
+// Glyphicons font path
+$icon-font-path: "../fonts/";
+
+// Grid settings
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+
+// Colors
+$brand-primary: #02579a;
+$brand-dark: #013d6c;
+$form-text-color: #6f6f6f;
+$sidebar-link-text-color: $brand-primary;
+
+$body-bg:               #fafafa !default;
+
+//Fonts
+$font-size-base: 16px;
+$font-family-sans-serif:  'Open Sans', sans-serif;
+
+//Breakpoints
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px !default//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs !default//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min !default// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px !default$screen-sm-min: $screen-sm !default//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min !default// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px !default$screen-md-min: $screen-md !default//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min !default
