@@ -8,58 +8,58 @@ block content
             form.user-content-form
                 fieldset.user-content-first
                     div.form-group.col-xs-12
-                        label.col-md-3.col-xs-4(for='name')='NOMBRE COMPLETO*'
-                        div.col-md-9.col-xs-8.reset-padding
+                        label.col-md-3.col-xs-4.col-sm-3.reset-padding(for='name')='NOMBRE COMPLETO*'
+                        div.col-md-9.col-xs-8.col-sm-9.reset-padding
                             input.form-control#name(name='name', type='text')
                     div.form-group.col-xs-12
-                        div.col-xs-12.col-md-5
+                        div.col-xs-12.col-md-5.reset-padding
                             select#doc-type.form-control
                                 option='TIPO DE DOCUMENTO'
                                 option(value='cc')='CÉDULA DE CIUDADANÍA'
-                        label.col-xs-12.col-md-4(for='doc-number')='No. DOCUMENTO'
-                        div.col-xs-12.col-md-3
-                            input#doc-number.form-control(name='doc-number', type='number')
+                        label.col-xs-12.col-md-4.reset-padding(for='doc-number')='No. DOCUMENTO'
+                        div.col-xs-12.col-md-3.reset-padding
+                            input#doc-number.form-control.reset-padding(name='doc-number', type='number')
                     div.form-group.col-xs-12
-                        label.col-md-4.col-xs-12='¿CUANDO NACISTE?'
+                        label.col-md-4.col-xs-12.reset-padding='¿CUANDO NACISTE?'
                         input(rsmdatedropdowns, ng-model="model")
-                    div.form-group.col-xs-6.col-md-6
-                        label.col-xs-12.col-md-4(for='cellphone')='CELULAR*'
-                        div.col-xs-12.col-md-8
+                    div.form-group.col-xs-6.col-md-6.right-container
+                        label.col-xs-12.col-md-4.reset-padding(for='cellphone')='CELULAR*'
+                        div.col-xs-12.col-md-8.reset-padding
                             input.form-control#cellphone(type='number', name='cellphone')
-                    div.form-group.col-xs-6.col-md-6
-                        label.col-xs-12.col-md-4(for='phone')='TELÉFONO*'
-                        div.col-xs-12.col-md-8
+                    div.form-group.col-xs-6.col-md-6.left-container
+                        label.col-xs-12.col-md-4.reset-padding(for='phone')='TELÉFONO*'
+                        div.col-xs-12.col-md-8.reset-padding
                             input.form-control#phone(type='number', name='phone')
                     div.form-group.col-xs-12
-                        label.col-xs-4.col-md-3(for='address')='DIRECCIÓN'
-                        div.col-xs-8.col-md-9
+                        label.col-xs-4.col-md-3.col-sm-3.reset-padding(for='address')='DIRECCIÓN'
+                        div.col-xs-8.col-md-9.col-sm-9.reset-padding
                             input.form-control#address(type='text', name='address')
                     div.form-group.col-md-6.col-xs-12
-                        label.col-xs-4.col-md-4(for='city')='CIUDAD DE RESIDENCIA'
-                        div.col-xs-8.col-md-8
+                        label.col-xs-4.col-md-3.col-sm-3.reset-padding(for='city')='CIUDAD DE RESIDENCIA'
+                        div.col-xs-8.col-md-9.col-sm-9.reset-padding
                             input.form-control#city(type='text', name='city')
                     div.form-group.col-md-6.col-xs-12
-                        label.col-xs-4.col-md-4(for='email')='EMAIL*'
-                        div.col-xs-8.col-md-8
+                        label.col-xs-4.col-md-3.col-sm-3.reset-padding(for='email')='EMAIL*'
+                        div.col-xs-8.col-md-9.col-sm-9.reset-padding
                             input.form-control#email(type='email', name='email')
 
 
                 fieldset.user-content-second
                     div(ng-repeat="row in uc.rows")
                         div.form-group.col-xs-12.col-md-6
-                            label.col-md-6.col-xs-5(for='invoice-number')='NÚMERO DE FACTURA*'
-                            div.col-md-6.col-xs-7
+                            label.col-md-6.col-xs-5.col-sm-4(for='invoice-number')='NÚMERO DE FACTURA*'
+                            div.col-md-6.col-xs-7.col-sm-8
                                 input.form-control#invoice-number(name='invoice-number')
                         div.form-group.col-xs-12.col-md-6
-                            label.col-md-6.col-xs-5(for='bono-number')='NÚMERO DE BONO*'
-                            div.col-md-6.col-xs-7
+                            label.col-md-6.col-xs-5.col-sm-4(for='bono-number')='NÚMERO DE BONO*'
+                            div.col-md-6.col-xs-7.col-sm-8
                                 input.form-control#bono-number(name='bono-number')
                     div.form-group.col-xs-12
                         label.terms-conditions='Acepto Términos y Condiciones '
                         input(type='checkbox', value='', required)
                     div.form-group.col-xs-12
-                        button.col-xs-9(type='submit')='ENVIA PUNTOS'
-                        button.col-xs-3.plus-button.pull-right(type='button', ng-click="uc.addRow()")=' + '
+                        button.col-xs-9(type='submit', ng-click="uc.addUser()")='ENVIA PUNTOS'
+                        button.col-xs-3.plus-button.pull-right(type='button', ng-click="uc.addRow()")=' '
 
 
 block scripts
