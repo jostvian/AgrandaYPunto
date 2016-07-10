@@ -3,13 +3,13 @@ block header
     div.hero-header
 
 block content
-    div.container.content(ng-app='agranda-y-punto')
+    div.container.content.reset-padding(ng-app='agranda-y-punto')
         div.user-content.container(ng-controller='UserRegister as uc')
             form.user-content-form
                 fieldset.user-content-first
                     div.form-group.col-xs-12
                         label.col-md-3.col-xs-4(for='name')='NOMBRE COMPLETO*'
-                        div.col-md-9.col-xs-8
+                        div.col-md-9.col-xs-8.reset-padding
                             input.form-control#name(name='name', type='text')
                     div.form-group.col-xs-12
                         div.col-xs-12.col-md-5
@@ -41,6 +41,11 @@ block content
                         label.col-xs-4.col-md-4(for='email')='EMAIL*'
                         div.col-xs-8.col-md-8
                             input.form-control#email(type='email', name='email')
+                    div.form-group
+                        label.col-md-4='¿CUANDO NACISTE?'
+                        div
+                            input(rsmdatedropdowns, ng-model="model")
+
 
                 fieldset.user-content-second
                     div.form-group.col-xs-12
