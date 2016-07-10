@@ -5,19 +5,29 @@ var app = angular.module('agranda-y-punto');
 
 app.controller("UserRegister", ['$scope', 'UserService', '$uibModal', function ($scope, userService, $uibModal) {
     uc = this;
-    uc.rows = [
-        {
-            code: '',
-            invoice: ''
-        }
-    ];
+    uc.user = {
+        rows: [
+            {
+                code: '',
+                invoice: ''
+            },
+            {
+                code: '',
+                invoice: ''
+            }
+        ]
+    };
     uc.points = 0;
     function calculatePoints() {
-        uc.points = uc.rows.length * 2000;
+        uc.points = uc.user.rows.length * 2000;
+    }
+    
+    function checkPoints(){
+        
     }
 
     uc.addRow = function () {
-        uc.rows.push({
+        uc.user.rows.push({
             code: '',
             invoice: ''
         });
@@ -43,6 +53,7 @@ app.controller("UserRegister", ['$scope', 'UserService', '$uibModal', function (
 
             }
         });
+        userService.createUser(uc.user);
     }
 }]);
 app.controller("ModalController", ['$scope',  '$uibModalInstance', 'message', function ($scope, uibModalInstance, message) {

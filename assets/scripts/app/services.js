@@ -12,6 +12,11 @@
             },
             checkPoints: function(cant, cb) {
                 cb(cant >= 40000);
+            },
+            createUser: function(user, cb){
+                var pUser = new User(user);
+                pUser.$save();
+                cb(pUser);
             }
         }
     };
