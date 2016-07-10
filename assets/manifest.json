@@ -8,6 +8,7 @@
     "app.js": {
       "files": [
         "scripts/app/app.js",
+        "scripts/app/services.js",
         "scripts/app/controllers.js"
       ]
     },

@@ -3,7 +3,7 @@
  */
 var app = angular.module('agranda-y-punto');
 
-app.controller("UserRegister", ['$scope',function($scope){
+app.controller("UserRegister", ['$scope', 'UserService', '$uibModal', function ($scope, userService, $uibModal) {
     uc = this;
     uc.rows = [
         {
@@ -11,10 +11,43 @@ app.controller("UserRegister", ['$scope',function($scope){
             invoice: ''
         }
     ];
-    uc.addRow=function(){
+    uc.points = 0;
+    function calculatePoints() {
+        uc.points = uc.rows.length * 2000;
+    }
+
+    uc.addRow = function () {
         uc.rows.push({
             code: '',
             invoice: ''
-        })
+        });
+        calculatePoints();
     };
+
+    uc.addUser = function () {
+        console.log('Chones');
+        calculatePoints();
+        userService.checkPoints(uc.points, function (result) {
+            if(!result){
+                var modalInstance = $uibModal.open({
+                    animation: true,
+                    templateUrl: 'myModalContent.html',
+                    controller: 'ModalController',
+                    resolve: {
+                        message: function () {
+                            return '¡LO SENTIMOS! Debes cargar como mínimo 40.000 puntos para participar.';
+                        }
+                    }
+                });
+            }else{
+
+            }
+        });
+    }
+}]);
+app.controller("ModalController", ['$scope',  '$uibModalInstance', 'message', function ($scope, uibModalInstance, message) {
+    $scope.message = message;
+    $scope.ok = function(){
+        uibModalInstance.close();
+    }
 }]);

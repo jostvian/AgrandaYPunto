@@ -5,6 +5,8 @@ block header
 block content
     div.container.content.reset-padding(ng-app='agranda-y-punto')
         div.user-content.container(ng-controller='UserRegister as uc')
+            script(type="text/ng-template", id="myModalContent.html")
+                include parts/modalTemplate
             form.user-content-form
                 fieldset.user-content-first
                     div.form-group.col-xs-12
