@@ -53,6 +53,12 @@ block content
                         label.col-md-3.col-xs-5(for='bono-number')='NÚMERO DE BONO*'
                         div.col-md-3.col-xs-7
                             input.form-control#bono-number(name='bono-number')
+                    div.form-group.col-xs-12
+                        label.terms-conditions='Acepto Términos y Condiciones '
+                        input(type='checkbox', value='', required)
+                    div.form-group.col-xs-12
+                        button.col-xs-9(type='submit')='ENVIA PUNTOS'
+                        button.col-xs-3.plus-button(type='button')=' + '
 
 
 block scripts
