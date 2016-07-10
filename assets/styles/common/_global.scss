@@ -31,3 +31,10 @@ html {
     }
   }
 }
+
+@media screen and (max-width: 325px) {
+  html, html body{
+    font-size: 23px !important;
+  }
+
+}
