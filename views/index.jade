@@ -46,20 +46,24 @@ block content
 
                 fieldset.user-content-second
                     div(ng-repeat="row in uc.rows")
-                        div.form-group.col-xs-12.col-md-6
+                        div.form-group.col-xs-12.col-md-6.reset-padding
                             label.col-md-6.col-xs-5.col-sm-4(for='invoice-number')='NÚMERO DE FACTURA*'
                             div.col-md-6.col-xs-7.col-sm-8
                                 input.form-control#invoice-number(name='invoice-number')
-                        div.form-group.col-xs-12.col-md-6
+                        div.form-group.col-xs-12.col-md-6.reset-padding
                             label.col-md-6.col-xs-5.col-sm-4(for='bono-number')='NÚMERO DE BONO*'
                             div.col-md-6.col-xs-7.col-sm-8
                                 input.form-control#bono-number(name='bono-number')
                     div.form-group.col-xs-12
                         label.terms-conditions='Acepto Términos y Condiciones '
-                        input(type='checkbox', value='', required)
+                        input.terms-conditions-checkbox(type='checkbox', value='', required)
                     div.form-group.col-xs-12
-                        button.col-xs-9(type='submit', ng-click="uc.addUser()")='ENVIA PUNTOS'
+                        button.col-xs-9.send-button(type='submit', ng-click="uc.addUser()")='ENVIA PUNTOS'
                         button.col-xs-3.plus-button.pull-right(type='button', ng-click="uc.addRow()")=' '
+                        footer.form-footer
+                            |Conoce  Términos y Condiciones
+                            br
+                            |Todos los derechos reservados QBANO 2016
 
 
 block scripts

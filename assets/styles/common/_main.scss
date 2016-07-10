@@ -53,13 +53,34 @@
     padding-bottom: rem(20);
     padding-top: rem(15);
     padding-right: rem(24);
+    .send-button{
+      background-color: transparent;
+      border: 5px solid white;
+      font-weight: bold;
+      padding: 5px;
+    }
     .plus-button{
       background-image: url("../images/plus-button.png");
       background-color: transparent;
-      width: rem(52);
-      height: rem(52);
+      width: 52px;
+      height: 52px;
       border: none;
       margin-right: rem(-24);
+    }
+    .terms-conditions{
+      font-size: rem(17);
+      padding-right: rem(10);
+    }
+    .terms-conditions-checkbox{
+      -webkit-transform: scale(1.6,1.6);
+      -moz-transform: scale(1.6,1.6);
+      -o-transform: scale(1.6,1.6);
+    }
+    .form-footer{
+      font-size: rem(17);
+      clear: both;
+      text-align: center;
+      margin-top: 90px;
     }
   }
 }
@@ -70,7 +91,26 @@
 .reset-margin{
   margin: 0;
 }
+@media screen and (max-width: 325px) {
+  .user-content-second .terms-conditions-checkbox{
+    -webkit-transform: scale(1.3,1.3);
+    -moz-transform: scale(1.3,1.3);
+    -o-transform: scale(1.3,1.3);
+  }
 
+
+}
+@media (min-width: $screen-sm-min) {
+  .iframe-wrapper {
+    iframe {
+      border: none;
+      position: absolute;
+    }
+  }
+  .user-content-second .form-footer, .user-content-second .terms-conditions{
+    font-size: rem(22);
+  }
+}
 @media screen and(min-width: $screen-sm-max) {
   .hero-header {
     background: url(../images/hero-header.jpg) no-repeat;
