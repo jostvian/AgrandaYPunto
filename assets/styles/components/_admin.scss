@@ -1,0 +1,38 @@
+.admin-container {
+  .client-content {
+    max-width: rem(500);
+    background: linear-gradient(to bottom, $brand-primary 0%,$brand-primary 71%,$brand-primary 71%,$brand-dark 71%,$brand-dark 100%); /* W3C */
+    padding-bottom: rem(85);
+    padding-top: rem(45);
+    .item{
+      padding-bottom: rem(70);
+      &-quantity{
+        background-color: white;
+        border: solid 3px orange;
+        display: inline-block;
+        height: rem(40);
+        margin-left: rem(2);
+        padding: rem(10);
+        text-align: center;
+        width: rem(40);
+      }
+    }
+  }
+}
+.table.admin-table {
+  background: white;
+  border: solid 4px orange;
+  margin: auto;
+  max-width: rem(400);
+  tr.content-row {
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $brand-primary;
+    }
+  }
+  thead tr {
+    background-color: #f0f0f0;
+  }
+}

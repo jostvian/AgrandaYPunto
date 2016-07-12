@@ -8,12 +8,11 @@ var debug = require('debug')('agranda_y_punto:login-route');
 
 
 module.exports = function(passport){
-    debug('construct');
     router.get('/', function(req, res, next) {
         res.render('login', {title: 'Login Page'});
     });
 
-    router.post('/', passport.authenticate('local', { successRedirect: '/users',
+    router.post('/', passport.authenticate('local', { successRedirect: '/clients',
         failureRedirect: '/login/',
         failureFlash: false 
     }

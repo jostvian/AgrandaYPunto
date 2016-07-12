@@ -1,0 +1,41 @@
+.admin-modal {
+  font-weight: 600;
+  &-window {
+    background: linear-gradient(to bottom, $brand-primary 0%, $brand-primary 71%, $brand-primary 71%, $brand-dark 71%, $brand-dark 100%); /* W3C */
+    margin: auto;
+    max-width: rem(700);
+    padding: rem(20);
+    position: relative;
+    transform: translateY(10%);
+  }
+  &-user-info {
+    background-color: white;
+    border: solid 4px orange;
+    padding: rem(10);
+    padding-bottom: rem(65);
+    &-field {
+      padding-bottom: rem(10);
+    }
+  }
+  &-codes {
+    &-table {
+      border: solid 4px orange;
+      width: 100%;
+      div.table-scroll-wrapper {
+        max-height: rem(250);
+        overflow: auto;
+      }
+      .table.admin-table {
+        border: none;
+        max-width: none;
+      }
+    }
+  }
+  &-footer {
+    top: rem(84);
+    button {
+      background: transparent;
+      border: none;
+    }
+  }
+}

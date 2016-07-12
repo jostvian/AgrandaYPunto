@@ -3,11 +3,13 @@
  */
 (function (app) {
     var userService = function ($http, $resource) {
-        var User = $resource('/user/:userId', {userId: '@id'});
+        var User = $resource('/clients/client/:userId', {userId: '@id'},{
+            checkcodes: {method:'POST'}
+        });
         return {
-            cheackUser: function (id, cb) {
-                user.get({userId: id}, function (user) {
-                    cb(user !== undefined);
+            checkUser: function (id, cb) {
+                User.get({userId: id}, function (user) {
+                    cb(user.name !== undefined);
                 });
             },
             checkPoints: function(cant, cb) {
@@ -17,8 +19,18 @@
                 var pUser = new User(user);
                 pUser.$save();
                 cb(pUser);
+            },
+            checkCodes: function(codes, cb){
+                $http({
+                    method:"POST",
+                    url: "/clients/checkcodes",
+                    data: codes
+                }).then(function successCallback(response){
+                    cb(response.data);
+                }
+                );
             }
-        }
+        };
     };
     app.service('UserService', ['$http', '$resource', userService]);
 })(angular.module('agranda-y-punto'));

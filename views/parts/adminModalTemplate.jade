@@ -1,0 +1,53 @@
+div.admin-modal
+    div.admin-modal-user-info.col-sm-4
+        div.admin-modal-user-info-field
+            |{{cd.client.name}}
+        div.admin-modal-user-info-field
+            | {{cd.client.identType}}
+        div.admin-modal-user-info-field
+            | {{cd.client.identification}}
+        div.admin-modal-user-info-field
+            | {{cd.client.birth}}
+        div.admin-modal-user-info-field
+            | {{cd.client.cellPhone}}
+        div.admin-modal-user-info-field
+            | {{cd.client.phone}}
+        div.admin-modal-user-info-field
+            | {{cd.client.address}}
+        div.admin-modal-user-info-field
+            | {{cd.client.city}}
+        div.admin-modal-user-info-field
+            | {{cd.client.email}}
+        div.admin-modal-user-info-field
+            | {{cd.client.franchise}}
+    div.admin-modal-codes.col-sm-8
+        table.admin-modal-codes-table
+            tr
+                td
+                    table.table.admin-table
+                        thead
+                            tr
+                                th="FACTURA"
+                                th="CÓDIGO"
+                tr
+                    td
+                        div.table-scroll-wrapper
+                            table.table.admin-table
+                                tr(ng-repeat-start="code in cd.codes")
+                                    td
+                                    td
+                                tr.content-row(ng-repeat-end)
+                                    td
+                                        |{{code.invoice}}
+                                    td
+                                        |{{code.code}}
+    div.admin-modal-footer.col-sm-8
+        button.col-sm-offset-1.col-sm-3
+            | Audifonos
+            div.item-icon
+        button.col-sm-offset-1.col-sm-3
+            | Parlantes
+            div.item-icon
+        button.col-sm-offset-1.col-sm-3
+            | Iphone
+            div.item-icon

@@ -36,7 +36,7 @@
     background-color: darkgoldenrod;
     background-size: contain;
     padding-bottom: rem(12);
-    padding-top: rem(40);
+    padding-top: rem(20);
     .form-control{
       color: purple;
     }
@@ -61,8 +61,9 @@
     padding-right: rem(24);
     .send-button{
       background-color: transparent;
-      border: 5px solid white;
+      border: 3px solid white;
       font-weight: bold;
+      font-size: 1.2rem;
       padding: 5px;
     }
     .plus-button{
@@ -83,11 +84,16 @@
       -o-transform: scale(1.6,1.6);
     }
     .form-footer{
-      font-size: rem(17);
+      font-size: rem(13);
       clear: both;
       text-align: center;
       margin-top: 90px;
     }
+  }
+  .footer{
+    text-align: center;
+    color: gray;
+    font-size: rem(13);
   }
 }
 .reset-padding{
@@ -114,7 +120,7 @@
     }
   }
   .user-content-second .form-footer, .user-content-second .terms-conditions{
-    font-size: rem(22);
+    font-size: rem(13);
   }
 }
 @media screen and(min-width: $screen-sm-max) {

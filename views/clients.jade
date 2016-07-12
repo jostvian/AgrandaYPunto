@@ -1,0 +1,39 @@
+extends layouts/layout
+block head
+    link(rel='stylesheet', href='/styles/vendor.css')
+block content
+    div.container.content.admin-container(ng-app='agranda-y-punto.admin')
+        div.client-content.container(ng-controller='ClientAdmin as cc')
+            script(type="text/ng-template", id="adminModalContent.html")
+                include parts/adminModalTemplate
+            script(type="text/ng-template", id="adminModalWindow.html")
+                include parts/adminModalWindow
+            div.item.col-sm-3.col-sm-offset-1
+                | Audifonos
+                div.item-quantity
+                    | {{cc.hpQuant}}
+            div.item.col-sm-3
+                | Parlantes
+                div.item-quantity
+                    | {{cc.spQuant}}
+            div.item.col-sm-3
+                | iPhones
+                div.item-quantity
+                    | {{cc.ipQuant}}
+            table.table.admin-table
+                thead
+                    tr
+                        th="Nombre"
+                        th="puntos"
+                tbody
+                    each user in clients
+                        tr
+                            td
+                            td
+                        tr.content-row(ng-click="cc.clientDetail('"+ user.identification  +"')")
+                            td=user.name
+                            td=user.points
+
+
+block scripts
+    script(type='text/javascript',  src='/scripts/admin.js')

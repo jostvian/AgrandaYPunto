@@ -33,7 +33,7 @@
                 date.month--;
                 return date;
             }
-        };
+        }
 
         return {
             checkDate: function (date) {
@@ -68,7 +68,7 @@
                 return lst;
             }())
         };
-    })
+    });
 
     dd.directive('rsmdatedropdowns', ['rsmdateutils', function (rsmdateutils) {
         return {

@@ -14,7 +14,9 @@
     },
     "admin.js": {
       "files": [
-        "scripts/admin/admin.js"
+        "scripts/admin/admin.js",
+        "scripts/admin/services.js",
+        "scripts/admin/controllers.js"
       ]
     },
     "fonts": {
@@ -24,7 +26,10 @@
       "files": ["images/**/*"]
     },
     "vendor.js": {
-      "bower": ["jquery", "angular", "angular-animate", "angular-touch", "bootstrap-sass", "angular-resource", "angular-bootstrap"]
+      "bower": ["jquery", "angular", "angular-animate", "angular-touch", "bootstrap-sass", "angular-resource", "angular-bootstrap", "angular-ui-grid"]
+    },
+    "vendor.css": {
+      "bower": ["jquery", "angular", "angular-animate", "angular-touch", "bootstrap-sass", "angular-resource", "angular-bootstrap", "angular-ui-grid"]
     },
     "main.css": {
       "files": [

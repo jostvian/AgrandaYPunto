@@ -9,7 +9,7 @@ var db = require('./lib/db');
 var auth = require('./lib/auth');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var clients = require('./routes/clients');
 var login = require('./routes/login')(auth);
 
 var app = express();
@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(session({secret: 'secret session utra secret', resave:false}));
 app.use(bodyParser.json());
@@ -35,7 +35,7 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
-app.use('/users', users);
+app.use('/clients', clients);
 app.use('/login', login);
 
 // catch 404 and forward to error handler
@@ -68,6 +68,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;

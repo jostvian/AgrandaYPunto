@@ -1,27 +1,32 @@
 .modal {
   &-content {
+    color: darkviolet;
     background: url(/images/fondo.png) no-repeat transparent;
     background-size: cover;
     border: none;
     box-shadow: none;
-    padding: 10px 30px;
+    padding: 36px;
   }
   &-header {
+    padding: 15px;
     border: none;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
     .btn-close{
       background: url(/images/boton_x.png) no-repeat transparent;
       background-size: cover;
       border: none;
       height: 50px;
       width: 50px;
-      margin-right: -46px;
-      margin-top: -27px;
+      margin-right: -55px;
+      margin-top: -52px;
     }
   }
   &-body {
     border: none;
-    color: darkviolet;
     font-weight: 700;
+    font-size: 2.2rem;
     text-align: center;
   }
   &-footer {

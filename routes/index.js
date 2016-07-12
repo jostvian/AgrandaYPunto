@@ -5,7 +5,7 @@ const Client = require('../lib/model/client');
 /* GET home page. */
 router.get('/',
     function (req, res, next) {
-        res.render('index', {title: 'Express'});
+        res.render('index', {title: 'Agranda y punto'});
     });
 
 router.post('/user',
